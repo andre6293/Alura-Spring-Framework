@@ -6,7 +6,6 @@
 ---
 
 ## Módulo 1 - Fundamentos do Java na Web 
-
 ### Servlets
 Servlet ou *servidorzinho* é uma classe Java usada para estender as funcionalidades de um servidor. Apesar dos servlets poderem responder a quaisquer tipos de requisições, eles normalmente são usados para estender as aplicações hospedadas por servidores web, desta forma eles podem ser imaginados como Applets Java que rodam em servidores em vez de rodarem nos navegadores web.
 
@@ -19,14 +18,18 @@ O Tomcat é puramente Java enquanto Apache HTTP é escrito em C. Além disso, o 
 ### doPost e doGet
 É possível limitar os métodos HTTP suportados por um servlet usando as classes doPost e doGet ao invés da classe service.
 
-## JSP
-Jakarta Server Pages (anteriormente Javaserver Pages) é uma página automaticamente processada pelo Tomcat, para gerar HTML dinamicamente no JSP usamos Scriptlets (<% SCRIPT %>).
+### JSP
+Jakarta Server Pages (anteriormente Javaserver Pages) é uma página automaticamente processada pelo Tomcat, para gerar HTML dinamicamente no JSP usamos Scriptlets (<% SCRIPT %>). Pode-se usar expression language (**${}**) ou também, com o uso de JSTL, usar taglibs como *core:if*, *core:forEach* e *core:url*.
 * Usa-se o RequestDispatcher para *chamar* um JSP a partir de um ServLet.
+
+### JTSL
+JTSL ou *Java Standard Tag Library* é uma biblioteca padrão de tags do Java. Ela estende a especificação JSP adicionando uma biblioteca de tags das tags JSP para tarefas comuns, tais como processamento de dados XML, execução condicional, loops e internacionalização.
 
 ### Notas adicionais
 * @WebServlet marca a classe como uma servlet e além disso a registra a URL
 * As requisições sempre são strings
 * Com o método GET as requisições aparecem na URL, diferente do método POST
+* Não utilizar a uri jstl/core ou jstl/fmt, tratam-se de uris da versão 1.0 e foram depreciadas. Usar jsp/jstl/core e jsp/jstl/fmt no lugar.
 
 ---
 Andre Pinto (jan 21 - )
