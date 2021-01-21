@@ -39,4 +39,13 @@ public class Banco {
 			if (it.next().getId() == id)
 				it.remove();	
 	}
+
+
+	public Empresa buscaPorId(Integer id) {
+		for (Empresa empresa : empresas) {
+			if (empresa.getId() == id)
+				return empresa;
+		}
+		return null;
+	}
 }
