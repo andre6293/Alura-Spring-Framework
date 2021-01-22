@@ -14,7 +14,7 @@
 			Nome: <input type="text" name="name" value="${ nome }"/>
 			Data: <input type="text" name="data" value="<fmt:formatDate value="${ data }" pattern="dd/MM/yyyy"/>"/>
 			<input type="hidden" name="id" value="${ id }"/>
-			<input type="hidden" name="action" value="modificarEmpresa"/>
+			<input type="hidden" name="action" value="ModificarEmpresa"/>
 			<input type="submit" title="enviar"/>
 		</form>
 	</body>

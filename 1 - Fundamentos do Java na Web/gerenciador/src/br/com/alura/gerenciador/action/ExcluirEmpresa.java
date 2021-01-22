@@ -7,12 +7,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.alura.gerenciador.servlet.modelo.Banco;
-import br.com.alura.gerenciador.servlet.modelo.Empresa;
+import br.com.alura.gerenciador.modelo.Banco;
+import br.com.alura.gerenciador.modelo.Empresa;
 
 public class ExcluirEmpresa implements Action{
 	
-	public void executar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String executar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		List<Empresa> empresas = Banco.getEmpresas();
 		Integer id = Integer.valueOf(request.getParameter("id"));
@@ -25,6 +25,6 @@ public class ExcluirEmpresa implements Action{
 				empresas.remove(id);
 		}
 		
-		response.sendRedirect("entrada?action=listarEmpresas");
+		return "redirect:entrada?action=ListarEmpresas";		
 	}
 }

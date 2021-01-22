@@ -8,13 +8,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.alura.gerenciador.servlet.modelo.Banco;
-import br.com.alura.gerenciador.servlet.modelo.Empresa;
+import br.com.alura.gerenciador.modelo.Banco;
+import br.com.alura.gerenciador.modelo.Empresa;
 
 public class MostrarEmpresa implements Action {
 
 	@Override
-	public void executar(HttpServletRequest request, HttpServletResponse response)
+	public String executar(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
 		List<Empresa> empresas = Banco.getEmpresas();
@@ -30,7 +30,7 @@ public class MostrarEmpresa implements Action {
 		request.setAttribute("data", empresa.getDataAbertura());
 		request.setAttribute("id", empresa.getId());
 		
-		rd.forward(request, response);
+		return "forward:formModificaEmpresa.jsp";
 	}
 
 }

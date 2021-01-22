@@ -8,5 +8,5 @@ import javax.servlet.http.HttpServletResponse;
 
 public interface Action {
 	
-	public void executar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException; 
+	public String executar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException; 
 }

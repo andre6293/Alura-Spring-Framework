@@ -1,4 +1,4 @@
-package br.com.alura.gerenciador.servlet.modelo;
+package br.com.alura.gerenciador.modelo;
 
 import java.io.IOException;
 import java.io.PrintWriter;

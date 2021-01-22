@@ -1,4 +1,4 @@
-#Notas
+# Notas
 
 ## Conteúdo
 - [Módulo 1 - Fundamentos do Java na Web](#m-dulo-1---fundamentos-do-java-na-web)
@@ -45,8 +45,10 @@ JTSL ou *Java Standard Tag Library* é uma biblioteca padrão de tags do Java. E
 É um princípio de design de programas de computadores onde a sequência (controle) de chamadas dos métodos é invertida em relação à programação tradicional, ou seja, ela não é determinada diretamente pelo programador. Ex.: Tomcat e Spring.
 
 ### MVC
-MVC (*Model View Controller*) é um padrão arquitetural 
+MVC (*Model View Controller*) é um padrão arquitetural de controle e organização em camadas. Quando o controlador decide qual ação executar, a ação em si decide qual Modelo utilizar. Já a camada View se preocupa em renderizar os dados. Note que o View não sabe de onde vem os dados e não acessa diretamente o banco de dados, apenas recebe e mostra os dados de visualização.
 
+### Java Reflection
+Serve para determinar métodos e atributos que serão utilizados de determinada classe (que você nem conhece) em tempo de execução.
 
 ### Notas adicionais
 * @WebServlet marca a classe como uma servlet e além disso a registra a URL
@@ -61,6 +63,7 @@ Ex.:<br>
 * Através da anotação @WebServlet podemos definir mais do que uma URL para chamar o servlet, por exemplo:<br>
 `@WebServlet(urlPatterns= {"/listaEmpresas", "/empresas"})`<br>
 `public class ListaEmpresasServlet extends HttpServlet { `
+* Os JSPs devem ficar dentro da pasta WEB-INF para não serem acessados de forma externa às ações, pois eles dependem delas para serem alimentados
 
 ## Módulo 2 - Do JDBC ao Spring Data
 ## Módulo 3 - Aplicação web com Spring MVC e Spring Security
