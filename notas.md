@@ -31,6 +31,9 @@ JTSL ou *Java Standard Tag Library* é uma biblioteca padrão de tags do Java. E
 ### Inversão de Controle (IOC)
 É um princípio de design de programas de computadores onde a sequência (controle) de chamadas dos métodos é invertida em relação à programação tradicional, ou seja, ela não é determinada diretamente pelo programador. Ex.: Tomcat e Spring.
 
+### MVC
+MVC (*Model View Controller*), é um padrão arquitetural 
+
 
 ### Notas adicionais
 * @WebServlet marca a classe como uma servlet e além disso a registra a URL
@@ -43,7 +46,7 @@ Ex.:<br>
 <br>E posteriormente usar o método<br>
 `it.remove();`
 * Através da anotação @WebServlet podemos definir mais do que uma URL para chamar o servlet, por exemplo:<br>
-`@WebServlet(urlPatterns= {"/listaEmpresas", "/empresas"})`
+`@WebServlet(urlPatterns= {"/listaEmpresas", "/empresas"})`<br>
 `public class ListaEmpresasServlet extends HttpServlet { `
 
 ## Módulo 2 - Do JDBC ao Spring Data

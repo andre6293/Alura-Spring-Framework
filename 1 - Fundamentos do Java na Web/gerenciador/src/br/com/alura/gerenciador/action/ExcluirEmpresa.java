@@ -1,22 +1,19 @@
-package br.com.alura.gerenciador.servlet;
+package br.com.alura.gerenciador.action;
 
 import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.alura.gerenciador.servlet.modelo.Banco;
 import br.com.alura.gerenciador.servlet.modelo.Empresa;
 
-//@WebServlet("/removeEmpresa")
-public class RemoveEmpresaServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+public class ExcluirEmpresa implements Action{
+	
+	public void executar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		List<Empresa> empresas = Banco.getEmpresas();
 		Integer id = Integer.valueOf(request.getParameter("id"));
 		
@@ -28,6 +25,6 @@ public class RemoveEmpresaServlet extends HttpServlet {
 				empresas.remove(id);
 		}
 		
-		response.sendRedirect("listaEmpresas");
+		response.sendRedirect("entrada?action=listarEmpresas");
 	}
 }
