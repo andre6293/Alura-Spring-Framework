@@ -7,6 +7,7 @@ import java.util.Iterator;
 public class Banco {
 	
 	private static List<Empresa> empresas = new ArrayList<>();
+	private static List<Usuario> usuarios = new ArrayList<>();
 	private static int chaveSequencial = 1;
 	
 	static {
@@ -17,6 +18,9 @@ public class Banco {
 		
 		empresas.add(empresa);
 		empresas.add(empresa2);
+		
+		usuarios.add(new Usuario("fulano", "123"));
+		usuarios.add(new Usuario("anacleta", "rima2Daora"));
 	}
 	
 	
@@ -45,6 +49,25 @@ public class Banco {
 		for (Empresa empresa : empresas) {
 			if (empresa.getId() == id)
 				return empresa;
+		}
+		return null;
+	}
+
+
+	public static List<Usuario> getUsuarios() {
+		return usuarios;
+	}
+
+
+	public static void setUsuarios(List<Usuario> usuarios) {
+		Banco.usuarios = usuarios;
+	}
+
+
+	public Usuario usuarioExiste(String loginDigitado, String senhaDigitada) {
+		for (Usuario usuario : usuarios) {
+			if(usuario.ehIgual(loginDigitado, senhaDigitada))
+				return usuario;
 		}
 		return null;
 	}

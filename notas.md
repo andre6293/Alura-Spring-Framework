@@ -50,6 +50,11 @@ MVC (*Model View Controller*) é um padrão arquitetural de controle e organiza�
 ### Java Reflection
 Serve para determinar métodos e atributos que serão utilizados de determinada classe (que você nem conhece) em tempo de execução.
 
+### Autenticação X Autorização
+Autenticação é sobre verificar a identidade. Isso pode acontecer através de um login, token, impressão digital, RG, entre várias outras formas e combinações. Autorização, é verificar a permissão de acesso podendo criar permissões e papeis específicos que detalhem o acesso.
+
+
+
 ### Notas adicionais
 * @WebServlet marca a classe como uma servlet e além disso a registra a URL
 * As requisições sempre são strings

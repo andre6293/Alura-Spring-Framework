@@ -32,5 +32,4 @@ public class MostrarEmpresa implements Action {
 		
 		return "forward:formModificaEmpresa.jsp";
 	}
-
 }
