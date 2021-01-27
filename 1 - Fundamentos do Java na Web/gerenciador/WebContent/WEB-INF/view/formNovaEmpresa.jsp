@@ -8,6 +8,8 @@
 		<title>Inserir Empresa</title>
 	</head>
 	<body>
+		<c:import url="logoutParcial.jsp"/>
+		<h1>Inserir nova empresa</h1>
 		<form action="${ linkServletNovaEmpresa }" method="post">
 			Nome: <input type="text" name="name" />
 			Data: <input type="text" name="data" />

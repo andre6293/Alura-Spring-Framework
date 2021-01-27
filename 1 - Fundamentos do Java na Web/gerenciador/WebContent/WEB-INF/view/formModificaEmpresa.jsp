@@ -7,9 +7,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Inserir Empresa</title>
+		<title>Editar Empresa</title>
 	</head>
 	<body>
+		<c:import url="logoutParcial.jsp"/>
+		<h1>Modificar empresa</h1>
 		<form action="${ linkEntradaServlet }" method="post">
 			Nome: <input type="text" name="name" value="${ nome }"/>
 			Data: <input type="text" name="data" value="<fmt:formatDate value="${ data }" pattern="dd/MM/yyyy"/>"/>

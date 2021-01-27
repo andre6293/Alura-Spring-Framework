@@ -5,9 +5,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Inserir Usuário</title>
+		<title>Login</title>
 	</head>
 	<body>
+		<h1>Login de usuário</h1>
 		<form action="${ link1 }" method="post">
 			Login: <input type="text" name="login" />
 			Senha: <input type="password" name="password" />
