@@ -3,11 +3,11 @@
 
 ### [Módulo 1 - Fundamentos do Java na Web](https://github.com/andre6293/Alura-Spring-Framework/tree/main/1%20-%20Fundamentos%20do%20Java%20na%20Web)
 * Java Servlet: Fundamentos da programação web Java ([curso](https://cursos.alura.com.br/course/servlets-fundamentos-programacao-web-java) | [certificado](https://cursos.alura.com.br/certificate/78cc1ac0-b847-45d1-9a6b-af4efc5e7a9f))
-* Java Servlet: Autenticação, autorização e o padrão MVC ([curso](https://cursos.alura.com.br/course/servlet-autenticacao-autorizacao-mvc) | **doing**)
-* Maven: Build do zero a web ([curso](https://cursos.alura.com.br/course/maven-build-do-zero-a-web) | to-do)
+* Java Servlet: Autenticação, autorização e o padrão MVC ([curso](https://cursos.alura.com.br/course/servlet-autenticacao-autorizacao-mvc) | [certificado](https://cursos.alura.com.br/certificate/78cc1ac0-b847-45d1-9a6b-af4efc5e7a9f))
+* Maven: Build do zero a web ([curso](https://cursos.alura.com.br/course/maven-build-do-zero-a-web) | **doing**)
 
 ### [Módulo 2 - Do JDBC ao Spring Data](https://github.com/andre6293/Alura-Spring-Framework/tree/main/2%20-%20Do%20JDBC%20ao%20Spring%20Data)
-* Java e JDBC: Trabalhando com um banco de dados ([curso](https://cursos.alura.com.br/course/jdbc-dao-persistencia) | to-do)
+* Java e JDBC: Trabalhando com um banco de dados ([curso](https://cursos.alura.com.br/course/jdbc-dao-persistencia) | **doing**)
 * Java e JPA: Persista seus objetos com a JPA2 e Hibernate ([curso](https://cursos.alura.com.br/course/jpa-hibernate-persistencia-objetos) | to-do)
 * Java e JPA: Pesquise com JPQL e Criteria ([curso](https://cursos.alura.com.br/course/java-jpa-jpql-criteria) | to-do)
 * Spring Data JPA: Repositórios, Consultas, Projeções e Specifcations ([curso](https://cursos.alura.com.br/course/spring-data-jpa) | to-do)

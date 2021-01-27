@@ -56,6 +56,12 @@ Autenticação é sobre verificar a identidade. Isso pode acontecer através de 
 ### Servlet X Filter
 São bem semelhantes, porém o filtro tem uma responsabilidade a mais que é parar a execução através do parâmetro FilterChain que é usado para mandar a requisição para frente. 
 
+### Jetty
+Um **Servlet container** ou **Servlet Engine** como o Tomcat.
+
+### Wildfly, Weblogic e Websphere
+Wildfly (Redhat), Weblogic (Oracle), Websphere (IBM) são *Application Servers* e possuem mais recursos do que os *servlet containers*.
+
 ### Notas adicionais
 * @WebServlet marca a classe como uma servlet e além disso a registra a URL
 * As requisições sempre são strings
