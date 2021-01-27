@@ -78,6 +78,17 @@ Ex.:<br>
 * Os JSPs devem ficar dentro da pasta WEB-INF para não serem acessados de forma externa às ações, pois eles dependem delas para serem alimentados
 
 ## Módulo 2 - Do JDBC ao Spring Data
+### JDBC
+Java Database Connectivity (java.sql.\*) é um conjunto de classes e interfaces para Java que fazem o envio de instruções SQL para qualquer banco de dados relacional.
+
+### Design Pattern - Factory
+É um padrão que fornece a possibilidade de criar uma *fábrica* para criação de objetos em tempo de execução, deixando o cliente isento de instanciar a classe. Criam-se objetos sem expor a lógica ou as configurações de criação ao cliente. Além disso, é possível referir-se ao objeto recém-criado usando uma interface (usando uma abstração), desacoplando a implementação.
+
+###
+
+### Notas adicionais
+* Método execute da interface java.sql.Statement devolve *true* quando o resultado é um java.sql.ResultSet e *false* em caso contrário (update, delete, etc.)
+
 ## Módulo 3 - Aplicação web com Spring MVC e Spring Security
 ## Módulo 4 - API REST e Testes com Spring Boot
 
