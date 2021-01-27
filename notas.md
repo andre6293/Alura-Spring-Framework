@@ -84,10 +84,13 @@ Java Database Connectivity (java.sql.\*) é um conjunto de classes e interfaces 
 ### Design Pattern - Factory
 É um padrão que fornece a possibilidade de criar uma *fábrica* para criação de objetos em tempo de execução, deixando o cliente isento de instanciar a classe. Criam-se objetos sem expor a lógica ou as configurações de criação ao cliente. Além disso, é possível referir-se ao objeto recém-criado usando uma interface (usando uma abstração), desacoplando a implementação.
 
-###
+### SQL Injection
+É um tipo de ameaça de segurança que se aproveita de falhas em sistemas que interagem com bases de dados através de comandos SQL, onde o atacante consegue inserir uma instrução SQL personalizada e indevida dentro de uma consulta (SQL query) através da entradas de dados de uma aplicação, como formulários ou URL de uma aplicação. Pode ser evitado dentro do java.sql.\* utilizando PreparedStatement em vez do Statement simples.
+
 
 ### Notas adicionais
 * Método execute da interface java.sql.Statement devolve *true* quando o resultado é um java.sql.ResultSet e *false* em caso contrário (update, delete, etc.)
+* Em sua configuração padrão o JDBC possui auto-commit, dessa forma o usuário não tem controle total das transações com o banco de dados, para isso é necessário desligar esse recurso e usar os métodos commit() e rollback() manualmente.
 
 ## Módulo 3 - Aplicação web com Spring MVC e Spring Security
 ## Módulo 4 - API REST e Testes com Spring Boot

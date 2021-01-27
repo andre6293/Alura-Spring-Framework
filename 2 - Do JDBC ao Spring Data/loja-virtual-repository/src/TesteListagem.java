@@ -1,7 +1,4 @@
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class TesteListagem {
 
@@ -9,11 +6,14 @@ public class TesteListagem {
 
         ConnectionFactory connectionFactory = new ConnectionFactory();
         Connection connection = connectionFactory.recuperarConexao();
+        connection.setAutoCommit(false);
 
-        Statement stm = connection.createStatement();
-        stm.execute("SELECT ID, NOME, DESCRICAO FROM produto");
+        PreparedStatement pStm = connection.prepareStatement(
+                "SELECT ID, NOME, DESCRICAO FROM produto");
+//        Statement stm = connection.createStatement();
+        pStm.execute();
 
-        ResultSet rst = stm.getResultSet();
+        ResultSet rst = pStm.getResultSet();
 
         while (rst.next()) {
             int id = rst.getInt("id");
@@ -22,8 +22,6 @@ public class TesteListagem {
 
             System.out.println("ID: " + id + ", Nome: " + nome + "\nDescrição: " + descricao + "\n");
         }
-
-
         connection.close();
     }
 }
