@@ -1,5 +1,4 @@
 # Notas
-
 ## Conteúdo
 - [Módulo 1 - Fundamentos do Java na Web](#m-dulo-1---fundamentos-do-java-na-web)
   * [Servlets](#servlets)
@@ -11,8 +10,17 @@
   * [JTSL](#jtsl)
   * [Inversão de Controle (IOC)](#invers-o-de-controle--ioc-)
   * [MVC](#mvc)
+  * [Java Reflection](#java-reflection)
+  * [Autenticação X Autorização](#autentica--o-x-autoriza--o)
+  * [Servlet X Filter](#servlet-x-filter)
+  * [Jetty](#jetty)
+  * [Wildfly, Weblogic e Websphere](#wildfly--weblogic-e-websphere)
   * [Notas adicionais](#notas-adicionais)
 - [Módulo 2 - Do JDBC ao Spring Data](#m-dulo-2---do-jdbc-ao-spring-data)
+  * [JDBC](#jdbc)
+  * [Design Pattern - Factory](#design-pattern---factory)
+  * [SQL Injection](#sql-injection)
+  * [Notas adicionais](#notas-adicionais-1)
 - [Módulo 3 - Aplicação web com Spring MVC e Spring Security](#m-dulo-3---aplica--o-web-com-spring-mvc-e-spring-security)
 - [Módulo 4 - API REST e Testes com Spring Boot](#m-dulo-4---api-rest-e-testes-com-spring-boot)
 
@@ -87,10 +95,25 @@ Java Database Connectivity (java.sql.\*) é um conjunto de classes e interfaces 
 ### SQL Injection
 É um tipo de ameaça de segurança que se aproveita de falhas em sistemas que interagem com bases de dados através de comandos SQL, onde o atacante consegue inserir uma instrução SQL personalizada e indevida dentro de uma consulta (SQL query) através da entradas de dados de uma aplicação, como formulários ou URL de uma aplicação. Pode ser evitado dentro do java.sql.\* utilizando PreparedStatement em vez do Statement simples.
 
+### Pool de conexões
+É um cache de conexões de banco de dados mantido de forma que as conexões possam ser reutilizadas quando requisições futuras ao banco de dados forem requeridas. Isso permite uma melhor utilização por múltiplos usuário. O pool de conexões também reduz a quantidade de tempo que um usuário deve esperar para estabelecer uma conexão com o banco de dados.  
+
+### Design Pattern - DAO
+DAO (*Data Access Object*) é um padrão para aplicações que utilizam persistência de dados, onde tem a separação das regras de negócio das regras de acesso a banco de dados, implementada com linguagens de programação orientadas a objetos (como por exemplo Java) e arquitetura MVC, onde todas as funcionalidades de bancos de dados, tais como obter conexões, mapear objetos para tipos de dados SQL ou executar comandos SQL, devem ser feitas por classes DAO.  
+
+### Queries N+1
+N+1 significa executar uma query e mais uma nova query (N) para cada relacionamento.
+* Queries N+1 podem gerar um problema no desempenho
+* Queries N+1 podem ser evitadas através de joins no SQL
+
+### JDBC X JPA
+A principal diferença entre as duas bibliotecas é o nível de abstração, sendo o JDBC de mais baixo nível (e mais antigo) enquanto o JPA *esconde* o SQL do programador.
 
 ### Notas adicionais
 * Método execute da interface java.sql.Statement devolve *true* quando o resultado é um java.sql.ResultSet e *false* em caso contrário (update, delete, etc.)
 * Em sua configuração padrão o JDBC possui auto-commit, dessa forma o usuário não tem controle total das transações com o banco de dados, para isso é necessário desligar esse recurso e usar os métodos commit() e rollback() manualmente.
+* Ao utilizar uma classe que estenda AutoCloseable é possível envolver sua declaração em um try-with-resources, dessa forma não é necessário fechar o método. Ex.:<br>
+`try (PreparedStatement stm = connection.prepareStatement("INSERT INTO produto (nome, descricao) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS)) {}`
 
 ## Módulo 3 - Aplicação web com Spring MVC e Spring Security
 ## Módulo 4 - API REST e Testes com Spring Boot

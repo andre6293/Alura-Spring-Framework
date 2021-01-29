@@ -1,9 +1,13 @@
+package br.com.alura.jdbc.teste;
+
+import br.com.alura.jdbc.factory.ConnectionFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
+//import java.sql.Statement;
 
-public class TestaRemocao {
+public class TesteRemocao {
 
     public static void main(String[] args) throws SQLException {
         ConnectionFactory connectionFactory = new ConnectionFactory();
@@ -16,6 +20,7 @@ public class TestaRemocao {
 
         int updateCount = pStm.getUpdateCount();
 
+        System.out.println("Remoção bem sucedida");
         System.out.println("Linhas modificadas: " + updateCount);
     }
 }
