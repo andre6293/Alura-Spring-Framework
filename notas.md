@@ -70,6 +70,17 @@ Um **Servlet container** ou **Servlet Engine** como o Tomcat.
 ### Wildfly, Weblogic e Websphere
 Wildfly (Redhat), Weblogic (Oracle), Websphere (IBM) são *Application Servers* e possuem mais recursos do que os *servlet containers*.
 
+### Maven
+É uma ferramenta de automação de compilação utilizada primariamente em projetos Java. Similarmente temos Gradle.
+* O Ant gerencia builds, mas não as dependências. Dessa forma ele se diferencia dos citados acima.
+* O argumento *-o* rodará o comando de forma offline, sem verificar se há uma versão nova de alguma dependência ou a necessidade de baixar algo.<br>
+Ex.:<br>
+`mvn -o compile`
+*
+
+#### pom.xml
+POM (Project Object Model) é um arquivo que contém as informações e configurações de um projeto Maven.
+
 ### Notas adicionais
 * @WebServlet marca a classe como uma servlet e além disso a registra a URL
 * As requisições sempre são strings
