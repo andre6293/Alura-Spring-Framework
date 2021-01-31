@@ -81,6 +81,23 @@ Ex.:<br>
 #### pom.xml
 POM (Project Object Model) é um arquivo que contém as informações e configurações de um projeto Maven.
 
+#### Maven Phases
+* **validate** - validação de que o projeto está correto e todas as informações necessárias estão disponíveis
+* **compile** - compilação do código fonte do projeto
+* **test** - testagem do código compilando utilizando o framework de testes adequado. Esses testes não exigem que o código esteja empacotado ou *deployado*
+* **package** - empacotamento do código compilado em um formato de distribuição como o JAR
+* **verify** - verificação da integridade para assegurar qualidade
+* **install** - instala o pacote no repositório local para ser usado como dependência em outros projetos localmente
+* **deploy** - feito no ambiente de build, copia o pacote final para o repositório remoto para compartilhamento com outros desenvolvedores e projetos.
+
+#### Relatórios do Maven
+Um desses relatórios é o PMD (*Programming Mistake Detector*) que analisa o código fonte e detecta possíveis margens de bug.<br>
+`mvn pmd:pmd`<br>
+`mvn pmd:check - esse comando falha o build caso alguma regra do PMD seja violada no código fonte e ele se relaciona à fase *verify*`<br>
+
+#### JaCoco
+Plugin de *test coverage* para Maven.
+
 ### Notas adicionais
 * @WebServlet marca a classe como uma servlet e além disso a registra a URL
 * As requisições sempre são strings
