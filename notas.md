@@ -1,5 +1,4 @@
 # Notas
-## Conteúdo
 - [Módulo 1 - Fundamentos do Java na Web](#m-dulo-1---fundamentos-do-java-na-web)
   * [Servlets](#servlets)
   * [Tomcat](#tomcat)
@@ -15,11 +14,21 @@
   * [Servlet X Filter](#servlet-x-filter)
   * [Jetty](#jetty)
   * [Wildfly, Weblogic e Websphere](#wildfly--weblogic-e-websphere)
+  * [Maven](#maven)
+    + [pom.xml](#pomxml)
+    + [Maven Phases](#maven-phases)
+    + [Relatórios do Maven](#relat-rios-do-maven)
+    + [JaCoco](#jacoco)
+    + [Tags <scope/\>](#tags--scope---)
   * [Notas adicionais](#notas-adicionais)
 - [Módulo 2 - Do JDBC ao Spring Data](#m-dulo-2---do-jdbc-ao-spring-data)
   * [JDBC](#jdbc)
   * [Design Pattern - Factory](#design-pattern---factory)
   * [SQL Injection](#sql-injection)
+  * [Pool de conexões](#pool-de-conex-es)
+  * [Design Pattern - DAO](#design-pattern---dao)
+  * [Queries N+1](#queries-n-1)
+  * [JDBC X JPA](#jdbc-x-jpa)
   * [Notas adicionais](#notas-adicionais-1)
 - [Módulo 3 - Aplicação web com Spring MVC e Spring Security](#m-dulo-3---aplica--o-web-com-spring-mvc-e-spring-security)
 - [Módulo 4 - API REST e Testes com Spring Boot](#m-dulo-4---api-rest-e-testes-com-spring-boot)
@@ -76,7 +85,6 @@ Wildfly (Redhat), Weblogic (Oracle), Websphere (IBM) são *Application Servers* 
 * O argumento *-o* rodará o comando de forma offline, sem verificar se há uma versão nova de alguma dependência ou a necessidade de baixar algo.<br>
 Ex.:<br>
 `mvn -o compile`
-*
 
 #### pom.xml
 POM (Project Object Model) é um arquivo que contém as informações e configurações de um projeto Maven.
@@ -93,10 +101,17 @@ POM (Project Object Model) é um arquivo que contém as informações e configur
 #### Relatórios do Maven
 Um desses relatórios é o PMD (*Programming Mistake Detector*) que analisa o código fonte e detecta possíveis margens de bug.<br>
 `mvn pmd:pmd`<br>
-`mvn pmd:check - esse comando falha o build caso alguma regra do PMD seja violada no código fonte e ele se relaciona à fase *verify*`<br>
+`mvn pmd:check - esse comando falha o build caso alguma regra do PMD seja violada no código fonte e ele se relaciona à fase verify`<br>
 
 #### JaCoco
 Plugin de *test coverage* para Maven.
+
+#### Tags <scope/\>
+* compile - é o escopo padrão, as dependências compiladas ficarão no classpath
+* provided - similar ao compile, mas os artefatos serão providos pelo JDK/container em tempo de execução
+* runtime - não é necessário para compilar, mas sim em tempo de execução
+* test - dependência apenas necessária para a compilação e execução dos testes
+* system - igual ao provided, mas o artefato deve estar explicitado no <systemPath/\>
 
 ### Notas adicionais
 * @WebServlet marca a classe como uma servlet e além disso a registra a URL
@@ -110,7 +125,7 @@ Ex.:<br>
 `it.remove();`
 * Através da anotação @WebServlet podemos definir mais do que uma URL para chamar o servlet, por exemplo:<br>
 `@WebServlet(urlPatterns= {"/listaEmpresas", "/empresas"})`<br>
-`public class ListaEmpresasServlet extends HttpServlet { `
+`public class ListaEmpresasServlet extends HttpServlet {}`
 * Os JSPs devem ficar dentro da pasta WEB-INF para não serem acessados de forma externa às ações, pois eles dependem delas para serem alimentados
 
 ## Módulo 2 - Do JDBC ao Spring Data
@@ -124,10 +139,10 @@ Java Database Connectivity (java.sql.\*) é um conjunto de classes e interfaces 
 É um tipo de ameaça de segurança que se aproveita de falhas em sistemas que interagem com bases de dados através de comandos SQL, onde o atacante consegue inserir uma instrução SQL personalizada e indevida dentro de uma consulta (SQL query) através da entradas de dados de uma aplicação, como formulários ou URL de uma aplicação. Pode ser evitado dentro do java.sql.\* utilizando PreparedStatement em vez do Statement simples.
 
 ### Pool de conexões
-É um cache de conexões de banco de dados mantido de forma que as conexões possam ser reutilizadas quando requisições futuras ao banco de dados forem requeridas. Isso permite uma melhor utilização por múltiplos usuário. O pool de conexões também reduz a quantidade de tempo que um usuário deve esperar para estabelecer uma conexão com o banco de dados.  
+É um cache de conexões de banco de dados mantido de forma que as conexões possam ser reutilizadas quando requisições futuras ao banco de dados forem requeridas. Isso permite uma melhor utilização por múltiplos usuário. O pool de conexões também reduz a quantidade de tempo que um usuário deve esperar para estabelecer uma conexão com o banco de dados.
 
 ### Design Pattern - DAO
-DAO (*Data Access Object*) é um padrão para aplicações que utilizam persistência de dados, onde tem a separação das regras de negócio das regras de acesso a banco de dados, implementada com linguagens de programação orientadas a objetos (como por exemplo Java) e arquitetura MVC, onde todas as funcionalidades de bancos de dados, tais como obter conexões, mapear objetos para tipos de dados SQL ou executar comandos SQL, devem ser feitas por classes DAO.  
+DAO (*Data Access Object*) é um padrão para aplicações que utilizam persistência de dados, onde tem a separação das regras de negócio das regras de acesso a banco de dados, implementada com linguagens de programação orientadas a objetos (como por exemplo Java) e arquitetura MVC, onde todas as funcionalidades de bancos de dados, tais como obter conexões, mapear objetos para tipos de dados SQL ou executar comandos SQL, devem ser feitas por classes DAO.
 
 ### Queries N+1
 N+1 significa executar uma query e mais uma nova query (N) para cada relacionamento.
@@ -144,6 +159,7 @@ A principal diferença entre as duas bibliotecas é o nível de abstração, sen
 `try (PreparedStatement stm = connection.prepareStatement("INSERT INTO produto (nome, descricao) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS)) {}`
 
 ## Módulo 3 - Aplicação web com Spring MVC e Spring Security
+
 ## Módulo 4 - API REST e Testes com Spring Boot
 
 ---

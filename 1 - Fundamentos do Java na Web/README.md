@@ -20,7 +20,12 @@
 * Deploy no Jetty
 
 ## Maven: Build do zero a web
-* TO-DO
+* Do zero aos relatórios
+* Maven no Eclipse
+* Repositório remoto e local
+* Relatórios de qualidade e cobertura
+* Criando um projeto web
+* Projeto web
 
 ---
-Andre Pinto (jan 21 - )
+Andre Pinto (jan 21 - fev 21)

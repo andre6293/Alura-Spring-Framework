@@ -4,7 +4,7 @@
 ### [Módulo 1 - Fundamentos do Java na Web](https://github.com/andre6293/Alura-Spring-Framework/tree/main/1%20-%20Fundamentos%20do%20Java%20na%20Web)
 * Java Servlet: Fundamentos da programação web Java ([curso](https://cursos.alura.com.br/course/servlets-fundamentos-programacao-web-java) | [certificado](https://cursos.alura.com.br/certificate/78cc1ac0-b847-45d1-9a6b-af4efc5e7a9f))
 * Java Servlet: Autenticação, autorização e o padrão MVC ([curso](https://cursos.alura.com.br/course/servlet-autenticacao-autorizacao-mvc) | [certificado](https://cursos.alura.com.br/certificate/4de0542c-7c33-433d-b880-7fca6f21b8c9))
-* Maven: Build do zero a web ([curso](https://cursos.alura.com.br/course/maven-build-do-zero-a-web) | **doing**)
+* Maven: Build do zero a web ([curso](https://cursos.alura.com.br/course/maven-build-do-zero-a-web) | [certificado](https://cursos.alura.com.br/certificate/2033bc10-3cac-4b38-a0ad-4bef77675325))
 
 ### [Módulo 2 - Do JDBC ao Spring Data](https://github.com/andre6293/Alura-Spring-Framework/tree/main/2%20-%20Do%20JDBC%20ao%20Spring%20Data)
 * Java e JDBC: Trabalhando com um banco de dados ([curso](https://cursos.alura.com.br/course/jdbc-dao-persistencia) | [certificado](https://cursos.alura.com.br/certificate/72c42e0a-dbbf-4565-bbd3-83871364ee77))
