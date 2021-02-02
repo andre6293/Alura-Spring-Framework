@@ -152,6 +152,36 @@ N+1 significa executar uma query e mais uma nova query (N) para cada relacioname
 ### JDBC X JPA
 A principal diferença entre as duas bibliotecas é o nível de abstração, sendo o JDBC de mais baixo nível (e mais antigo) enquanto o JPA *esconde* o SQL do programador.
 
+### JPA
+JPA (Jakarta Persistence API) é um ORM (Object Relacional Mapper) Java, um ORM mapeia as classes para tabelas e gera o SQL de forma automática.
+
+### EntityManager
+Para gerar uma instância de EntityManager é necessário configurar propriedades no arquivo persistence.xml e obter a instância através da classe Persistence, como mostrado abaixo:<br>
+`EntityManagerFactory entityManagerFactory = `<br>
+`    Persistence.createEntityManagerFactory("financas");`<br>
+<br>
+`EntityManager manager = entityManagerFactory.createEntityManager();`<br>
+<br>
+`manager.close();`<br>
+
+### Transação
+A transação é um mecanismo para manter a consistência das alterações de estado no banco, visto que todas as operações precisam ser executadas com sucesso, para que a transação seja confirmada.
+
+### JPA - Método .find()
+Ao utilizar o método entityManager.find() é gerado um objeto do tipo do modelo para representar o resultado. Esse objeto/entidade está em estado *managed* no JPA, dessa forma, qualquer alteração feita será *commitada/syncada* no banco de dados. Esse comportamento também se repete ao usar o entityManager.persist(objeto).
+
+### JPA - Estados
+* **Transient** - um novo objeto que ainda não foi associado com o Hibernate, portanto não está mapeado a um banco de dados e não tem id 
+* **Managed** - o objeto está no banco de dados e sincronizado
+* **Detached** - alterações feitas no objeto/entidade não serão traduzidos automaticamente para o banco de dados
+* **Removed** - o objeto já foi *managed*, tem id, porém não se encontra mais no banco de dados
+
+### JPA - Anotações @\*To\*
+* **@OneToOne** -
+* **@OneToMany** - 
+* **@ManyToOne** -
+* **@ManyToMany** -
+
 ### Notas adicionais
 * Método execute da interface java.sql.Statement devolve *true* quando o resultado é um java.sql.ResultSet e *false* em caso contrário (update, delete, etc.)
 * Em sua configuração padrão o JDBC possui auto-commit, dessa forma o usuário não tem controle total das transações com o banco de dados, para isso é necessário desligar esse recurso e usar os métodos commit() e rollback() manualmente.
