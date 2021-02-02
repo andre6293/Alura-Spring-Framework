@@ -176,17 +176,19 @@ Ao utilizar o método entityManager.find() é gerado um objeto do tipo do modelo
 * **Detached** - alterações feitas no objeto/entidade não serão traduzidos automaticamente para o banco de dados
 * **Removed** - o objeto já foi *managed*, tem id, porém não se encontra mais no banco de dados
 
-### JPA - Anotações @\*To\*
-* **@OneToOne** -
+### JPA - Anotações @\*To\* (completar)
+* **@OneToOne** - é criada uma coluna de chave estrangeira
 * **@OneToMany** - 
-* **@ManyToOne** -
-* **@ManyToMany** -
+* **@ManyToOne** - é criada uma coluna de chave estrangeira
+* **@ManyToMany** - é criada uma tabela de relacionamento para as duas tabelas
 
 ### Notas adicionais
 * Método execute da interface java.sql.Statement devolve *true* quando o resultado é um java.sql.ResultSet e *false* em caso contrário (update, delete, etc.)
 * Em sua configuração padrão o JDBC possui auto-commit, dessa forma o usuário não tem controle total das transações com o banco de dados, para isso é necessário desligar esse recurso e usar os métodos commit() e rollback() manualmente.
 * Ao utilizar uma classe que estenda AutoCloseable é possível envolver sua declaração em um try-with-resources, dessa forma não é necessário fechar o método. Ex.:<br>
 `try (PreparedStatement stm = connection.prepareStatement("INSERT INTO produto (nome, descricao) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS)) {}`
+* Anotar com @Deprecated o construtor padrão não utilizável para evitar que um outro desenvolvedor o utilize. É necessário manter o construtor padrão para uso do JPA
+* Por padrão, quando temos um relacionamento @OneToOne, ainda não obtemos a restrição que é esperada por um relacionamento @OneToOne, para isso é necessário colocar a anotação @JoinColumn(unique=true) no relacionamento. A anotação @JoinColumn só funciona na criação do schema.
 
 ## Módulo 3 - Aplicação web com Spring MVC e Spring Security
 

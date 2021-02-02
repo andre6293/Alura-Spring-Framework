@@ -13,6 +13,7 @@ public class Cliente {
     private String profissao;
     private String endereco;
 
+    @JoinColumn(unique = true) // sem essa anotação seria possível ter dois clientes para a mesma conta
     @OneToOne
     private Conta conta;
 

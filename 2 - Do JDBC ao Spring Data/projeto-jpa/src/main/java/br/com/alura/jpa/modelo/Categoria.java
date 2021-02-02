@@ -13,6 +13,14 @@ public class Categoria {
     private long id;
     private String nome;
 
+    @Deprecated // dessa forma outro desenvolvedor não utilizará esse construtor, só servindo para o funcionamento do JPA
+    public Categoria() {
+    }
+
+    public Categoria(String nome) {
+        this.nome = nome;
+    }
+
     public long getId() {
         return id;
     }

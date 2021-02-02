@@ -13,7 +13,7 @@ public class CriaConta {
         EntityManagerFactory emt = Persistence.createEntityManagerFactory("contas");
         EntityManager em = emt.createEntityManager();
 
-        Conta conta = new Conta(1234L, 123324L, "Cleber");
+        Conta conta = new Conta(111L, 665566L, "Geralt of Rivia");
 
         em.getTransaction().begin();
         em.persist(conta);

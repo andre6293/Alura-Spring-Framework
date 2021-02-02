@@ -31,6 +31,10 @@ public class Conta {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Long getAgencia() {
         return agencia;
     }
@@ -50,5 +54,4 @@ public class Conta {
     public void setSaldo(Double saldo) {
         this.saldo = saldo;
     }
-
 }
