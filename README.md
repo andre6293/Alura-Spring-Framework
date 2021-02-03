@@ -8,9 +8,9 @@
 
 ### [Módulo 2 - Do JDBC ao Spring Data](https://github.com/andre6293/Alura-Spring-Framework/tree/main/2%20-%20Do%20JDBC%20ao%20Spring%20Data)
 * Java e JDBC: Trabalhando com um banco de dados ([curso](https://cursos.alura.com.br/course/jdbc-dao-persistencia) | [certificado](https://cursos.alura.com.br/certificate/72c42e0a-dbbf-4565-bbd3-83871364ee77))
-* Java e JPA: Persista seus objetos com a JPA2 e Hibernate ([curso](https://cursos.alura.com.br/course/jpa-hibernate-persistencia-objetos) | **doing**)
+* Java e JPA: Persista seus objetos com a JPA2 e Hibernate ([curso](https://cursos.alura.com.br/course/jpa-hibernate-persistencia-objetos) | [certificado](https://cursos.alura.com.br/certificate/406916a7-131b-41b4-9359-800a2f6cbf0b))
 * Java e JPA: Pesquise com JPQL e Criteria ([curso](https://cursos.alura.com.br/course/java-jpa-jpql-criteria) | to-do)
-* Spring Data JPA: Repositórios, Consultas, Projeções e Specifcations ([curso](https://cursos.alura.com.br/course/spring-data-jpa) | to-do)
+* Spring Data JPA: Repositórios, Consultas, Projeções e Specifications ([curso](https://cursos.alura.com.br/course/spring-data-jpa) | to-do)
 
 ### [Módulo 3 - Aplicação web com Spring MVC e Spring Security](https://github.com/andre6293/Alura-Spring-Framework/tree/main/3%20-%20Aplica%C3%A7%C3%A3o%20web%20com%20Spring%20MVC%20e%20Spring%20Security)
 * Spring MVC: Crie um web app com Thymeleaf e Bootstrap ([curso](https://cursos.alura.com.br/course/spring-mvc-thymeleaf-bootstrap) | to-do)

@@ -10,7 +10,12 @@
 * Aplicação Desktop
 
 ## Java e JPA: Persista seus objetos com a JPA2 e Hibernate
-*
+* Sobre a Java Persistence API
+* Usando EntityManager
+* Mapeando relacionamentos
+* Relacionamento para Muitos
+* Pesquisando com JPQL
+
 ## Java e JPA: Pesquise com JPQL e Criteria
 *
 ## Spring Data JPA: Repositórios, Consultas, Projeções e Specifications 

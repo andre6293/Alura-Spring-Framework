@@ -182,6 +182,9 @@ Ao utilizar o método entityManager.find() é gerado um objeto do tipo do modelo
 * **@ManyToOne** - é criada uma coluna de chave estrangeira
 * **@ManyToMany** - é criada uma tabela de relacionamento para as duas tabelas
 
+### JPQL
+JPQL significa Java Persistence Query Language. Ele é usado para criar consultas contra entidades para armazenar em um banco de dados relacional. JPQL é desenvolvido com base na sintaxe SQL.
+
 ### Notas adicionais
 * Método execute da interface java.sql.Statement devolve *true* quando o resultado é um java.sql.ResultSet e *false* em caso contrário (update, delete, etc.)
 * Em sua configuração padrão o JDBC possui auto-commit, dessa forma o usuário não tem controle total das transações com o banco de dados, para isso é necessário desligar esse recurso e usar os métodos commit() e rollback() manualmente.
