@@ -17,7 +17,7 @@
 * Spring MVC: Autenticação com Spring Security, API Rest e AJAX ([curso](https://cursos.alura.com.br/course/spring-mvc-security-rest-vuejs-ajax) | to-do)
 
 ### [Módulo 4 - API REST e Testes com Spring Boot](https://github.com/andre6293/Alura-Spring-Framework/tree/main/4%20-%20API%20REST%20e%20Testes%20com%20Spring%20Boot)
-* Spring Boot API REST: Construa uma API ([curso](https://cursos.alura.com.br/course/spring-boot-api-rest) | to-do)
+* Spring Boot API REST: Construa uma API ([curso](https://cursos.alura.com.br/course/spring-boot-api-rest) | [certificado](https://cursos.alura.com.br/certificate/4418c37e-519f-4169-a1b0-751c74bf5111))
 * Spring Boot API Rest: Segurança da API, Cache e Monitoramento ([curso](https://cursos.alura.com.br/course/spring-boot-seguranca-cache-monitoramento) | to-do)
 * Spring Boot e Teste: Profiles, Testes e Deploy ([curso](https://cursos.alura.com.br/course/spring-boot-profiles-testes-deploy) | to-do)
 

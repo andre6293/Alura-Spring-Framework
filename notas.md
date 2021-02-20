@@ -176,12 +176,6 @@ Ao utilizar o método entityManager.find() é gerado um objeto do tipo do modelo
 * **Detached** - alterações feitas no objeto/entidade não serão traduzidos automaticamente para o banco de dados
 * **Removed** - o objeto já foi *managed*, tem id, porém não se encontra mais no banco de dados
 
-### JPA - Anotações @\*To\* (completar)
-* **@OneToOne** - é criada uma coluna de chave estrangeira
-* **@OneToMany** - 
-* **@ManyToOne** - é criada uma coluna de chave estrangeira
-* **@ManyToMany** - é criada uma tabela de relacionamento para as duas tabelas
-
 ### JPQL
 JPQL significa Java Persistence Query Language. Ele é usado para criar consultas contra entidades para armazenar em um banco de dados relacional. JPQL é desenvolvido com base na sintaxe SQL.
 
@@ -196,6 +190,24 @@ JPQL significa Java Persistence Query Language. Ele é usado para criar consulta
 ## Módulo 3 - Aplicação web com Spring MVC e Spring Security
 
 ## Módulo 4 - API REST e Testes com Spring Boot
+### Spring
+É o mais popular e um dos mais antigos frameworks para Java criado por Rod Johnson.
+
+### DTO
+DTO (Data Transfer Object) é um padrão de projetos bastante usado em Java para o transporte de dados entre diferentes componentes de um sistema, diferentes instâncias ou processos de um sistema distribuído ou diferentes sistemas via serialização. Com seu uso é possível filtrar as informações solicitadas.
+
+### Design Pattern - Repository
+Repositório é uma interface de consulta e manipulação **específica** (não abstrata ou genérica) em coleções de dados, independente da sua origem. Esse padrão permite realizar o isolamento entre a camada de acesso a dados (DAL) de sua aplicação e sua camada de apresentação (UI) e camada de negócios (BLL).
+
+### JpaRepository
+Ao herdar a classe JpaRepository, é necessário atentar-se à nomenclatura dos métodos. Por exemplo, ao usar o método .findByVariavel, no caso de haver relacionamento com outra classe, deve-se usar *underscore* para separar as classes de suas variáveis. Ex.:<br>
+A Classe Tópico possui uma variável da do tipo Curso e um usuário deseja receber os tópicos cujos cursos tenham um nome específico.<br>
+Criando o repositório TopicoRepository ao assinar o método, o desenvolvedor deverá usar a nomenclatura findByCurso\_Nome(String nomeCurso)
+
+### Notas adicionais
+* Com a a anotação @Controller, no caso de um REST API, seria necessário anotar todos as classes que usam @RequestMapping também com @ResponseBody. Paraevitar essa situação se deve usar a anotação mais específica @RestController
+* Após colocar as anotações de validação (@NotNull, @NotEmpty) no modelo, é necessário usar a anotação @Valid para indicar ao Spring que deverá ser utilizada uma Bean Validation
+* Para tratamento de exceções geradas na criação de um modelo/form é necessário criar uma classe *handler* com a anotação @RestControllerAdvice para a classe, @ResponseStatus(code = HttpStatus.BAD\_REQUEST) e @ExceptionHandler para o método
 
 ---
 Andre Pinto (jan 21 - )
